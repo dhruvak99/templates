@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Dhruva}{K}{ \urlstyle{same}\href{mailto:dhruva.0107@gmail.com}{\bf \Large{dhruva.0107@gmail.com}}  \href{}{} | 
+\href{}{} \href{tel:9008201168}{\bf \Large{+91-9008201168}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Sapthagiri College \\ 
+Of Engineering}
+\descript{\large{BE in Computer Science}}
+\location{\large{Jun 2021 | Bangalore, India}}
+\location{\large{CGPA: 7.2 / 10.0}}
+\section{}
+\subsection{KMWA Pre-University \\College}
+\descript{\large{Physics,Chemistry \\ 
+Maths,Computer Science}}
+\location{\large{Aug 2017 | Bangalore, India}}
+\location{\large{MARKS: 88\% }}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\large{Machine Learning \\
+Statistical Methods \\
+Probability and Stochastic Processes\\
+Deep learning\\
+Natural Language Processing \\
+Time Series Analysis \\
+Computer Vision \\
+Data Structures \\
+Reinforcement Learning \\
+Computer Networks \\
+Google Cloud Platform \\
+Docker and Kubernetes \\}
+
+\sectionsep
+
+\section{SKILLS}
+\subsection{FRAMEWORKS}
+\large{Tensorflow \textbullet{} PyTorch \textbullet{} Scikit  \\
+\textbullet{} Keras}
+\subsection{PROGRAMMING}
+\large{Python \textbullet{} Java \textbullet{} C++ \textbullet{} Dart}
+\subsection{DEVELOPMENT}
+Git \textbullet{} Django \textbullet{} Flutter \textbullet{} Docker
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sectionsep
+
+\section{LINKS}
+\large{Github:// \href{https://github.com/dhruvak99}{\bf DhruvaK} \\
+LinkedIn://  \href{https://www.linkedin.com/in/dhruva-k-72600318a/}{\bf dhruvak} \\
+Portfolio :// \href{https://dhruva.dev.io}{\bf dhruva.k}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{{Experience}}
+\runsubsection{\Large{TCS iON}}
+\descript{| Machine Learning Intern }
+\location{\large{May 2020 - Jun 2020 | Bangalore, India}}
+\vspace{\topsep}
+\begin{tightemize}
+\large{\item Developed a deep learning algorithm for analysing sentiments in textual comments and feedback.
+\item Worked on a dataset containing \textbf{50K textual reviews} and performed data pre-processing and visualization of the same.
+\item Built a deep learning model using embedding and globalaveraging techniques and deployed the model.
+\item The model was deployed on a localhost using Flask Python web framework and a basic html-css webpage. }
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects}
+\runsubsection{\Large{GEsture controlled Video player}}
+\descript{\Large{| ML}}
+\location{{Mar 2020 – April 2020 }}
+\large{Worked on a dataset containing \textbf{5000+ data entries}.
+Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 0.98}
+Implemented the Bag of words technique and Random forest classifier. Fine-tuned the parameters for better accuracy.}
+\sectionsep
+
+\runsubsection{\Large{PathApp}}
+\descript{\Large{| Flutter}}
+\location{{Mar 2020 – April 2020 }}
+\large{Worked on a dataset containing \textbf{5000+ data entries}.
+Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 0.98}
+Implemented the Bag of words technique and Random forest classifier. Fine-tuned the parameters for better accuracy.}
+\sectionsep
+
+\runsubsection{\Large{Amenity Detection}}
+\descript{\Large{| ML}}
+\location{{Mar 2020 – April 2020}}
+\large{Worked on a dataset containing \textbf{5000+ data entries}.
+Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 0.98}
+Implemented the Bag of words technique and Random forest classifier. Fine-tuned the parameters for better accuracy.}
+\sectionsep
+
+\runsubsection{\Large{Convolution neural network}}
+\descript{\Large{| ML}}
+\location{{Mar 2020 – April 2020 }}
+\large{Worked on a dataset containing \textbf{5000+ data entries}.
+Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 0.98}
+Implemented the Bag of words technique and Random forest classifier. Fine-tuned the parameters for better accuracy.}
+\sectionsep
+
+\runsubsection{\Large{SPAM DETECTION}}
+\descript{\Large{| ML}}
+\location{{Mar 2020 – April 2020}}
+\large{Worked on a dataset containing \textbf{5000+} data entries classified into 2 classes.Implemented the Bag of words technique and Random forest classifier. Fine-tuned the parameters for better accuracy.Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 0.98}.}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+

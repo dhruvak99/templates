@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+
+\hypersetup{breaklinks=true,%
+pagecolor=white,%
+colorlinks=true,%
+linkcolor=cyan,%
+urlcolor=MyDarkBlue}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting parameters  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength{\tabin}
+\setlength{\tabin}{1em}
+\newlength{\secsep}
+\setlength{\secsep}{0.1cm}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\definecolor{contactgray}{gray}{0.3}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template Definitions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
+\newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
+\newcommand{\program}[1]{\begin{center}\textsc{#1}\end{center}}
+\newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
+
+\newenvironment{tabbedsection}[1]{
+  \begin{list}{}{
+      \setlength{\itemsep}{0pt}
+      \setlength{\labelsep}{0pt}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\leftmargin}{\tabin}
+      \setlength{\rightmargin}{\tabin}
+      \setlength{\listparindent}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\partopsep}{0pt}
+      \setlength{\topsep}{#1}
+    }
+  \item[]
+}{\end{list}}
+
+\newenvironment{nospacetabbing}{
+    \begin{tabbing}
+}{\end{tabbing}\vspace{-1.2em}}
+
+\newenvironment{resume_header}{}{\vspace{0pt}}
+
+
+\newenvironment{resume_section}[1]{
+  \filbreak
+  \vspace{2\secsep}
+  \textsc{\large#1}
+  \lineunder
+  \begin{tabbedsection}{\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{resume_subsection}[2][]{
+  \textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
+  \begin{tabbedsection}{0.5\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
+
+\newenvironment{resume_employer}[4]{
+  \vspace{\secsep}
+  \textbf{#1} \\ 
+  \indent {\small #2} \hfill {\footnotesize#3 (#4)}
+  \begin{tabbedsection}{0pt}
+  \begin{subitems}
+}{\end{subitems}\end{tabbedsection}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{resume_header}
+\name{Dhruva K}
+\program{Computer Science Major}
+\contact{\href{mailto:dhruva.0107@gmail.com}{dhruva.0107@gmail.com} \hspace{1cm} \href{tel:9008201168}{+91-9008201168} \hspace{1cm} \href{https://github.com/dhruvak99}{github.com/dhruvak99}}
+\end{resume_header}
+
+\begin{resume_section}{About Me}
+  \begin{nospacetabbing}
+  \textbf{Skills :}  \= Python,Pandas, Numpy, Tensorflow, Sklearn, Java, Linux, C++, Javasciprt, MySQL, \LaTeX\\*
+  \textbf{Tools :}  \= VS Code, Jupyter Notebook, Pycharm, Intellij \\*
+  \textbf{Languages :} \= Fluent in English,Kannada,Tamil; Conversational Proficiency in Hindi\\*
+  \textbf{Interests :} \=  Photography, Football, 3d Modelling\\*
+  \end{nospacetabbing}
+
+\end{resume_section}
+
+\begin{resume_section}{Education}
+  \begin{resume_subsection}[Bangalore, IN (2017--Present)]{Sapthagiri College of Engineering}
+    \begin{subitems}
+      \item B.E in Computer Science Engineering
+      \item CGPA: 7.2 / 10.0
+    \end{subitems}
+  \end{resume_subsection}
+  
+  
+  \begin{resume_subsection}[Bangalore, IN (2015--2017)]{KMWA Pre-University College}
+    \begin{subitems}
+      \item Physics, Chemistry, Maths, Computer Science
+      \item Cummulative Average: 88\%
+     \end{subitems}
+  \end{resume_subsection}
+\end{resume_section}
+
+\begin{resume_section}{Work Experience}
+  \begin{resume_employer}{TCS iON}{Remote Intern}{Bangalore, IN}{May 2020-June 2020}
+    \item Undertook one project which involved Analysing the sentiment in twitter tweets.
+    \item Performed exploratorydata analysis and visualization of the data using matplotlib and seaborn libraries.
+    \item Built a model containing bidirectional LSTM layers and was trained on a GPU.
+  \end{resume_employer}
+\end{resume_section}
+
+\begin{resume_section}{Projects}
+  \begin{resume_subsection}[(May 2020)]{Analysis of Movie Reviews}
+  \begin{subitems}
+    \item Developed a deep learning algorithm for analysing sentiments in textual comments and feedback.
+    \item Worked on a dataset containing \textbf{50K textual reviews} and performed data pre-processing and visualization of the same.
+    \item Built a deep learning model using embedding and globalaveraging techniques and deployed the model.
+    \item The model was deployed on a cloud-sever using Flask Python web framework, Heroku and a basic html-css webpage.
+    \item \href{https://movie-review-analysis-app.herokuapp.com/}{movie-review-analysis-app.herokuapp.com}
+    \end{subitems}
+  \end{resume_subsection}
+  
+\begin{resume_subsection}[(May 2020)]{Face Mask Detection}
+    \begin{subitems}
+        \item Trained a Deep learning model to detect whether the person is wearing a face mask. 
+        \item Used transfer learning and the MobileNetV2 application as the base model.
+        \item With the help of OpenCV library, implemented the algorithm on images and real-time video.
+    \end{subitems}
+  \end{resume_subsection}
+
+\begin{resume_subsection}[(April 2020)]{Spam Detection}
+    \begin{subitems}
+        \item Worked on a dataset containing \textbf{5000+} data entries classified into 2 classes.
+        \item Implemented the Bag of words technique and Random forest classifier. 
+        \item Fine-tuned the parameters for better accuracy using Grid Search technique.
+        \item Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 98\%}.
+    \end{subitems}
+  \end{resume_subsection}
+
+  \begin{resume_subsection}[(July 2020)]{A-Star path-finding visualization}
+  \begin{subitems}
+    \item Implemented the A* path finding algorithm using python.
+    \item Used the python-pygame library for visualising the algorithm.
+    \end{subitems}
+  \end{resume_subsection}
+
+ \begin{resume_section}{Course Work}
+  \begin{subitems}
+    \item Data Structures and Algorithms, Computer Networks, Database Management Systems. 
+    \item Machine Learning, Statistical Methods, Probability and Stochastic Processes.
+    \item Deep Learning, Natural Language processing, Computer Vision, Time-series Analysis.
+    \end{subitems}
+  \end{resume_subsection}
+\end{document}
+

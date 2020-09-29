@@ -1,0 +1,297 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.3 (22/9/2018)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/ZDTaylor/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-reversed}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Dhruva K}{ %\urlstyle{same}\href{http://example.com}{example.com}| \href{http://example2.co}{example2.co}\\
+\href{mailto:dhruva.0107@gmail.com}{dhruva.0107@gmail.com} | \href{tel:+919009201168}{9008201168}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.59\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{\Large{TCS iON}}
+\descript{| Remote Intern }
+\location{\large{May 2020 - Jun 2020 | Bangalore, India}}
+\vspace{\topsep}
+\begin{tightemize}
+\large{\item Undertook one project which involved Analysing the sentiment in twitter tweets.
+\item Performed exploratory data analysis and visualization of the data using \textbf{matplotlib} and \textbf{seaborn} libraries.
+\item Built a model using bidirectional LSTM layers which was trained on a GPU.
+}
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{\Large{Analysis of Movie Reviews}}
+\descript{\Large{| Deep Learning}}
+\location{\large{{March 2020 }}}
+\begin{tightemize}
+\large{\item Developed a deep learning algorithm for analysing sentiments in textual comments and feedback.Worked on a dataset containing \textbf{50K textual reviews} and performed data pre-processing and visualization of the same. Built a deep learning model using embedding and globalaveraging techniques and deployed the model. \item The model was deployed on a cloud-sever using Flask Python web framework, Heroku and a basic html-css webpage. \item  \href{https://movie-review-analysis-app.herokuapp.com/}{\textbf{movie-review-analysis-app.herokuapp.com}}
+}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\Large{Face Mask Detection}}
+\descript{\Large{| Computer Vision}}
+\location{\large{{May 2020 }}}
+\begin{tightemize}
+\large{\item Trained a Deep learning model to detect whether the person is wearing a face mask. Used transfer learning and the \textbf{MobileNetV2} application as the base model. \item With the help of OpenCV library, implemented the algorithm on images and real-time video.}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\Large{Spam Detection}}
+\descript{\Large{| Machine Learning}}
+\location{\large{{April 2020}}}
+\begin{tightemize}
+\large{\item Worked on a dataset containing \textbf{5000+} data entries classified into 2 classes. Implemented the Bag of words technique and Random forest classifier. \item Fine-tuned the parameters for better accuracy using Grid Search technique. Developed a Machine Learning pipeline model which had an average \textbf{accuracy of 98\%}.}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\Large{A* path-finder}}
+\descript{\Large{| Algorithms}}
+\location{\large{July 2020}}
+\begin{tightemize}
+\large{\item Implemented the A* path finding algorithm using python. 
+\item Used the python-pygame library for visualising the algorithm.}
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Research}
+% \runsubsection{Cornell Robot Learning Lab}
+% \descript{| Researcher}
+% \location{Jan 2014 – Jan 2015 | Ithaca, NY}
+% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.
+% \sectionsep
+
+% \runsubsection{Cornell Phonetics Lab}
+% \descript{| Head Undergraduate Researcher}
+% \location{Mar 2012 – May 2013 | Ithaca, NY}
+% Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research.
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COMMUNITY SERVICE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Community Service}
+
+% \begin{tabular}{rll}
+% 2013 -- 2018    & Tennessee     & St. Baldrick's Foundation\\
+% 2014 -- 2017	& Tennessee     & American Cancer Society's Hope Lodge\\
+% 2013 -- 2015    & Tennessee     & Habitat for Humanity\\
+% 2011 -- 2015    & Tennessee     & Special Olympics\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies}
+
+% \begin{tabular}{rll}
+% 2018 -- 2018    & National      & Association of Computing Machinery (ACM)\\
+% 2017 -- 2019	& National      & Scrum Alliance Certified ScrumMaster\\
+% 2015 -- 2019    & University    & Shackouls Honors College\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Sapthagiri College of Engineering}
+\location{\large{Bangalore, IN}}
+\descript{\large{B.E in Computer Science }}
+\location{\large{Expected June 2021}}
+% College of Engineering \\
+\location{ \large{Cum. GPA: 7.3 / 10.0}}
+\sectionsep
+
+\subsection{KMWA PU COLLege}
+\location{\large{Bangalore, IN}}
+\descript{\large{Physics, Chemistry, Maths, Computer Science}}
+\location{\large{2015-2017}}
+\location{ \large{Cum. AVG: 87\%}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{FRAMEWORKS}
+\large{Tensorflow \textbullet{} Django \textbullet{} Scikit  \\
+\textbullet{} Keras \textbullet{} Flask}
+\subsection{PROGRAMMING}
+\large{Python \textbullet{} Java \textbullet{} C++ \textbullet{} Dart}
+\sectionsep
+
+\subsection{DATABASES}
+\large{MySQL \textbullet{} MongoDB}
+\sectionsep
+
+\subsection{Tools \& Technology}
+\large{Git/Github \textbullet{} Linux
+\textbullet{} Windows \textbullet{} \LaTeX \textbullet{} VsCode \textbullet{} Sublime \textbullet{} Jupyter Notebook \textbullet{} Docker \\}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\large{Machine Learning \\
+Statistical Methods \\
+Probability and Stochastic Processes\\
+Deep learning\\
+Natural Language Processing \\
+Time Series Analysis \\
+Computer Vision \\
+Data Structures \\
+Reinforcement Learning \\
+Computer Networks \\
+Google Cloud Platform \\}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Societies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+\large{Github:// \href{https://github.com/dhruvak99}{\bf dhruvak99} \\
+LinkedIn://  \href{https://www.linkedin.com/in/dhruva-k-72600318a/}{\bf DhruvaK}}
+\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
